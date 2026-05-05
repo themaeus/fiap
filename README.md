@@ -2,7 +2,7 @@
 
 ## 1. Pré-requisitos
 
-- Python 3.12+
+- Python 3.11+
 - Ambiente virtual configurado (exemplo: `.venv`)
 
 ## 2. Instalar dependências
