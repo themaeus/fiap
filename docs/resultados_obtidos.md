@@ -1,4 +1,4 @@
-# Resultados Obtidos - Tech Challenge A - Fase 1
+# Resultados Obtidos para o Módulo 1
 
 ## Base de Dados
 
@@ -49,3 +49,26 @@ Pelos resultados de correlação e importância das variáveis, os atributos mai
 - O custo de um falso negativo é alto, por isso o recall da classe maligna é central.
 - A base é bem conhecida e útil para prototipagem, mas não representa toda a diversidade clínica do mundo real.
 - Para uso prático, seriam necessárias validação externa, governança de dados e avaliação ética.
+
+---
+
+# Resultados Obtidos para o Módulo 2
+
+## Otimização via Algoritmo Genético (entregável solicitado)
+
+- Implementação: Algoritmo Genético para otimização de hiperparâmetros com codificação por dicionário de parâmetros; seleção por torneio (k=3); cruzamento uniforme; mutação por reamostragem do gene; elitismo; função de fitness ponderada com ênfase em recall.
+- Arquivos de resultado: [outputs_quick/ga_resultados_quick_sumario.json](outputs_quick/ga_resultados_quick_sumario.json) (sumário) e [outputs_quick/ga_experimento_quick_1.json](outputs_quick/ga_experimento_quick_1.json), [outputs_quick/ga_experimento_quick_2.json](outputs_quick/ga_experimento_quick_2.json), [outputs_quick/ga_experimento_quick_3.json](outputs_quick/ga_experimento_quick_3.json).
+
+### Resumo dos achados
+
+- Baseline (modelos originais treinados no treino completo): `LogisticRegression` (recall 0.9286), `RandomForest` (recall 0.9286).
+- Experimentos GA (3 configurações): o GA melhorou métricas na validação (ex.: RF val accuracy 0.9890). No conjunto de teste, o `LogisticRegression` otimizado apresentou ganho real (teste: accuracy 0.9737, recall 0.9524, f1 0.9639). O `RandomForest` otimizado mostrou melhor validação, porém no teste manteve recall inferior ao baseline (teste recall 0.9048), sugerindo possível sobreajuste.
+
+### Conclusão (relativa ao comando)
+
+- Todos os requisitos do enunciado foram atendidos:
+	- Implementado Algoritmo Genético para otimização de hiperparâmetros (`ga_optimizer.py`).
+	- Foram executados 3 experimentos com diferentes configurações do GA.
+	- Foi realizada a comparação entre modelos originais e otimizados, com resultados salvos em `outputs_quick/`.
+
+> Observação: mantive o relatório focado apenas no que foi pedido. Se desejar, posso gerar explicações SHAP e salvar modelos otimizados (fora do escopo pedido).
