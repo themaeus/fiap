@@ -6,3 +6,10 @@ scikit-learn
 shap
 jupyter
 kagglehub
+langchain
+langchain-community
+langgraph
+pydantic
+openai
+ollama
+streamlit

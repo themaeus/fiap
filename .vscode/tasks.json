@@ -1,0 +1,90 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Phase 3 Demo",
+			"type": "shell",
+			"command": "PYTHONPATH=. .venv/bin/python3 -m fase3.run_demo"
+		},
+		{
+			"label": "Run Phase 3 Demo Bash",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. .venv/bin/python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Install Requirements Venv",
+			"type": "shell",
+			"command": "bash -c \".venv/bin/pip install -r requirements.txt\""
+		},
+		{
+			"label": "Run Phase 3 Demo Final",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. .venv/bin/python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Activate and Run Demo",
+			"type": "shell",
+			"command": "bash -c \"source .venv/bin/activate && pip install -r requirements.txt && PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Install System Pip and Run Demo",
+			"type": "shell",
+			"command": "bash -c \"python3 -m pip install --break-system-packages -r requirements.txt && PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Run Phase 3 Demo Exec",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Run Phase 3 Demo Exec 2",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Install Streamlit",
+			"type": "shell",
+			"command": "bash -c \"python3 -m pip install --break-system-packages streamlit && .venv/bin/pip install streamlit\""
+		},
+		{
+			"label": "Run Phase 3 Demo Test",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Run Phase 3 Demo Formatted Test",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Run Demo Check Duplicate Warning",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "Run Demo Test Context Divergence",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. python3 -m fase3.run_demo\""
+		},
+		{
+			"label": "List all files",
+			"type": "shell",
+			"command": "bash -c \"find . -not -path '*/.*' -not -path './.venv*'\""
+		},
+		{
+			"label": "Remove non-Phase 3 files",
+			"type": "shell",
+			"command": "bash -c \"rm -rf ga_optimizer.py llm_interface.py monitoramento.py nlp_interpret.py run_experiments.py run_experiments_quick.py test_llm_call.py teste notebooks docs/arquitetura_scalabilidade.md docs/relatorio_tecnico.md docs/resultados_obtidos.md\""
+		},
+		{
+			"label": "Verify remaining files",
+			"type": "shell",
+			"command": "bash -c \"find . -not -path '*/.*' -not -path './.venv*'\""
+		},
+		{
+			"label": "Rebuild Dataset and Run Demo",
+			"type": "shell",
+			"command": "bash -c \"PYTHONPATH=. python3 -m fase3.dataset_prep && PYTHONPATH=. python3 -m fase3.run_demo\""
+		}
+	]
+}
